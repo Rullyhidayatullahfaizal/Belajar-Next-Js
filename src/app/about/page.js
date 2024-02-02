@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 // Fungsi untuk mengambil data dari API
 async function getData() {
   try {
-    const response = await fetch('https://api.jikan.moe/v4/top/anime');
+    const response = await fetch('https://api.jikan.moe/v4/top/anime',{
+      
+    });
     if (!response.ok) {
       throw new Error('Failed to fetch data');
     }
@@ -33,10 +35,10 @@ export default function AboutPage() {
 
   return (
     <>
-      <div>
-        <p>satu dua tiga</p>
+      <div className="bg-slate-600">
+        <p className="font-semibold">satu dua tiga</p>
         {data && data.length > 0 && data.map((item, index) => (
-          <div key={index}>
+          <div className = ""key={index}>
             <p>judulnya adalah {item.title}</p> {/* Asumsi bahwa 'title' ada di dalam setiap objek 'data' */}
             <p>rank nya adalah {item.rank}</p>
             <p>timezone adalah {item.broadcast.string}</p>
