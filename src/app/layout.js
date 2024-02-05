@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const disableNavbar = ['/login','/register']
+const disableNavbar = ['/login','/register',"/dashboard"]
 
 // export const metadata = {
 //   title: "Create Next App",

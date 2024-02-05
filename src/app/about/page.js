@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 async function getData() {
   try {
     const response = await fetch('https://api.jikan.moe/v4/top/anime',{
-      
+      cache:"no-store"
     });
     if (!response.ok) {
       throw new Error('Failed to fetch data');
@@ -36,7 +36,7 @@ export default function AboutPage() {
   return (
     <>
       <div className="bg-slate-600">
-        <p className="font-semibold">satu dua tiga</p>
+        {/* <p className="font-semibold">satu dua tiga</p> */}
         {data && data.length > 0 && data.map((item, index) => (
           <div className = ""key={index}>
             <p>judulnya adalah {item.title}</p> {/* Asumsi bahwa 'title' ada di dalam setiap objek 'data' */}

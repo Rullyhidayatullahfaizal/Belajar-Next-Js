@@ -10,9 +10,9 @@ export default function AdminProductPage() {
 
 
     return (
-      <div>
+      <div className="bg-slate-500 w-3/6 flex justify-center items-center">
         
-        <button className="bg-red-700 px-2 py-3 rounded-md mt-4" onClick={() =>{ 
+        <button className="bg-red-700 px-10 py-5 rounded-md  " onClick={() =>{ 
           revProducts();
           router.push('/product');
           }}>
